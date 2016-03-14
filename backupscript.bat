@@ -4,7 +4,6 @@ For /f "tokens=2-4 delims=/ " %%a in ('date /t') do (set date=%%c-%%a-%%b)
 For /f "tokens=1-4 delims=:." %%a in ('echo %time%') do (set time=%%a%%b%%c%%d)
 
 set backupname=%1 %date% %time%.sql
-pause
 echo Running backup: %backupname%
 
 cd <route to "bin" directory on mysql server default directory>
